@@ -28,13 +28,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Integrations
+              Log Out
             </a>
           </li>
         </ul>
