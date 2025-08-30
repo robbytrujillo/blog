@@ -10,7 +10,9 @@
         <h1 class="h2">Categories</h1>
       </div>
 
-      <div class="mt-3">
+      <div class="container">
+        <div class="mt-3">
+        <button class="btn btn-primary rounded-pill mb-2">Create</button>
         <table class="table table-striped table-bordered">
             <thead>
                <tr>
@@ -39,6 +41,7 @@
                 @endforeach
             </tbody>
         </table>
+      </div>
       </div>
       
     </main>
