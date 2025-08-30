@@ -44,6 +44,7 @@
       </div>
       </div>
 
+    {{--  Modal Create  --}}
     @include('back.category.create-modal')
       
     </main>
