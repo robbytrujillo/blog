@@ -11,7 +11,7 @@
       </div>
 
       <div class="mt-3">
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered">
             <thead>
                <tr>
                  <th>No</th>
@@ -23,7 +23,16 @@
             </thead>
 
             <tbody>
-                
+                @foreach ($categories as $item)
+                  <tr>
+                    <td>
+                      {{ $loop->iteration }}
+                      {{ $item->name }}
+                      {{ $item->slug }}
+                      {{ $item->created_at }}
+                    </td>
+                  </tr>
+                @endforeach
             </tbody>
         </table>
       </div>
