@@ -29,7 +29,12 @@
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->slug }}</td>
                     <td>{{ $item->created_at }}</td>
-                    <td></td>
+                    <td>
+                      <div class="text-center">
+                        <button class="btn btn-warning rounded-pill"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
+                        <button class="btn btn-danger rounded-pill"><i class="fa-solid fa-trash"></i>Delete</button>
+                      </div>
+                    </td>
                   </tr>
                 @endforeach
             </tbody>
