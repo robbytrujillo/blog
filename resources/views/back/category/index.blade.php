@@ -12,7 +12,7 @@
 
       <div class="container">
         <div class="mt-3">
-        <button class="btn btn-primary rounded-pill mb-2">Create</button>
+        <button class="btn btn-primary rounded-pill mb-2" data-bs-toggle="modal" data-bs-target="#modalCreate">Create</button>
         <table class="table table-striped table-bordered">
             <thead>
                <tr>
@@ -43,6 +43,8 @@
         </table>
       </div>
       </div>
+
+    @include('back.category.create-modal')
       
     </main>
     
