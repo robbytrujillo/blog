@@ -25,12 +25,11 @@
             <tbody>
                 @foreach ($categories as $item)
                   <tr>
-                    <td>
-                      {{ $loop->iteration }}
-                      {{ $item->name }}
-                      {{ $item->slug }}
-                      {{ $item->created_at }}
-                    </td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->slug }}</td>
+                    <td>{{ $item->created_at }}</td>
+                    <td></td>
                   </tr>
                 @endforeach
             </tbody>
