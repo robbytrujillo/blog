@@ -8,7 +8,7 @@
             </div>
 
             <div class="modal-body">
-                <form action="" method="post">
+                <form action="{{ url('categories') }}" method="post">
                     @csrf
 
                     <div class="mb-3">
