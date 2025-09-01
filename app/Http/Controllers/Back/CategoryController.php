@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Back;
 
-use App\Http\Controllers\Controller;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {
@@ -34,6 +35,8 @@ class CategoryController extends Controller
         $data = $request->validate([
             'name' => 'required|min:3'
         ]);
+
+        $data['slug'] = Str::slug($data['name']);
     }
 
     /**
