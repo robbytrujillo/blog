@@ -37,6 +37,10 @@ class CategoryController extends Controller
         ]);
 
         $data['slug'] = Str::slug($data['name']);
+
+        Category::create($data);
+
+        return back();
     }
 
     /**
