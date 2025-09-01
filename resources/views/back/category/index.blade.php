@@ -13,6 +13,21 @@
       <div class="container">
         <div class="mt-3">
         <button class="btn btn-primary rounded-pill mb-2" data-bs-toggle="modal" data-bs-target="#modalCreate">Create</button>
+        
+        @if ($errors->any())
+          <div class="my-3">
+            <!-- /resources/views/post/create.blade.php -->
+                <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+                </div>
+              <!-- Create Post Form -->
+            </div>
+          @endif
+
         <table class="table table-striped table-bordered">
             <thead>
                <tr>
