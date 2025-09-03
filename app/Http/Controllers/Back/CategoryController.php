@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         return view('back.category.index', [
-            'categories' => Category::orderBy('id', 'DESC')->get()
+            'categories' => Category::latest()->get()
         ]);
     }
 
@@ -40,7 +40,7 @@ class CategoryController extends Controller
 
         Category::create($data);
 
-        return back();
+        return back()->with('success', 'Categories has been created');
     }
 
     /**
