@@ -1,5 +1,3 @@
-
-
 @extends('back.layout.template')
 
 @section('content')
@@ -56,8 +54,8 @@
                     <td>{{ $item->created_at }}</td>
                     <td>
                       <div class="text-center">
-                        <button class="btn btn-warning rounded-pill"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        <button class="btn btn-danger rounded-pill"><i class="fa-solid fa-trash"></i>Delete</button>
+                        <button class="btn btn-warning rounded-pill" data-bs-toggle="modal" data-bs-target="#modalUpdate{{ $item->id }}"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
+                        <button class="btn btn-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#modalDelete{{ $item->id }}"><i class="fa-solid fa-trash"></i>Delete</button>
                       </div>
                     </td>
                   </tr>
@@ -69,6 +67,12 @@
 
     {{--  Modal Create  --}}
     @include('back.category.create-modal')
+    
+    {{--  Modal Update  --}}
+    @include('back.category.update-modal')
+   
+    {{--  Modal Delete  --}}
+    @include('back.category.delete-modal')
       
     </main>
     

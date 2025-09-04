@@ -64,7 +64,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        $data['slug'] = Str::slug($data['name']);
+
+        Category::find($id)->update($data);
+
+        return back()->with('success', 'Categories has been updated');
     }
 
     /**
@@ -72,6 +80,8 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Category::find($id)->delete();
+
+        return back()->with('success', 'Categories has been deleted');
     }
 }
