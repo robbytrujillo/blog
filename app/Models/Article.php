@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Article extends Model
 {
@@ -12,4 +13,12 @@ class Article extends Model
     protected $fillable = [
         'category_id', 'title', 'slug', 'desc', 'img', 'views', 'status', 'publish_date'
     ];
+
+    // relation to categories table
+    
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'foreign_key', 'other_key');
+    }
+    
 }
