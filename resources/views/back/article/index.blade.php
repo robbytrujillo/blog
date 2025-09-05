@@ -38,15 +38,10 @@
             <thead>
                <tr>
                  <th>No</th>
-                 {{--  <th>Category Id</th>  --}}
                  <th>Title</th>
-                 <th>Slug</th>
-                 <th>Desc</th>
-                 <th>Img</th>
-                 <th>View</th>
+                 <th>Category</th>
                  <th>Status</th>
                  <th>Publish Date</th>
-                 <th>Created At</th>
                  <th>Function</th>
                </tr>
             </thead>
@@ -55,19 +50,15 @@
                 @foreach ($articles as $item)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    {{--  <td>{{ $item->category_id }}</td>  --}}
                     <td>{{ $item->title }}</td>
-                    <td>{{ $item->slug }}</td>
-                    <td>{{ $item->desc }}</td>
-                    <td>{{ $item->img }}</td>
-                    <td>{{ $item->views }}</td>
+                    <td>{{ $item->category_id }}</td>
                     <td>{{ $item->status }}</td>
                     <td>{{ $item->publish_date }}</td>
-                    <td>{{ $item->created_at }}</td>
                     <td>
                       <div class="text-center">
-                        <button class="btn btn-warning rounded-pill" data-bs-toggle="modal" data-bs-target="#modalUpdate{{ $item->id }}"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        <button class="btn btn-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#modalDelete{{ $item->id }}"><i class="fa-solid fa-trash"></i>Delete</button>
+                        <a href="" class="btn btn-info rounded-pill">Detail</a>
+                        <a href="" class="btn btn-warning rounded-pill">Edit</a>
+                        <a href="" class="btn btn-danger rounded-pill">Delete</a>
                       </div>
                     </td>
                   </tr>
