@@ -16,9 +16,9 @@ class Article extends Model
 
     // relation to categories table
     
-    public function user(): BelongsTo
+    public function Category(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'foreign_key', 'other_key');
+        return $this->belongsTo(Category::class);
     }
     
 }

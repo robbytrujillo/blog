@@ -51,7 +51,7 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->title }}</td>
-                    <td>{{ $item->category_id }}</td>
+                    <td>{{ $item->Category->name }}</td>
                     <td>{{ $item->status }}</td>
                     <td>{{ $item->publish_date }}</td>
                     <td>
