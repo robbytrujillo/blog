@@ -8,13 +8,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ url('article') }}">
               <span data-feather="file"></span>
               Articles
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ 'categories' }}">
+            <a class="nav-link" href="{{ url('categories') }}">
               <span data-feather="shopping-cart"></span>
               Categories
             </a>
