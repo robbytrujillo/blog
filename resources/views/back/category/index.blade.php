@@ -1,5 +1,7 @@
 @extends('back.layout.template')
 
+@section('title', 'List Categories | Admin')
+
 @section('content')
 
     {{--  Content  --}}

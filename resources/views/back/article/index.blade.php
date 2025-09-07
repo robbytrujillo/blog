@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.3/css/dataTables.bootstrap5.css">
 @endpush
 
+@section('title', 'List Articles | Admin')
+
 @section('content')
 
     {{--  Content  --}}
@@ -38,12 +40,13 @@
             </div>
           @endif
 
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered" id="dataTable">
             <thead class="text-center">
                <tr>
                  <th>No</th>
                  <th>Title</th>
                  <th>Category</th>
+                 <th>Views</th>
                  <th>Status</th>
                  <th>Publish Date</th>
                  <th>Function</th>
@@ -56,7 +59,18 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->title }}</td>
                     <td>{{ $item->Category->name }}</td>
-                    <td>{{ $item->status }}</td>
+                    <td>{{ $item->views }}x</td>
+                    
+                    @if ($item -> status == 0)
+                      <td>
+                        <span class="badge bg-danger">Private</span>
+                      </td>
+                    @else
+                       <td>
+                        <span class="badge bg-success">Published</span>
+                      </td>
+                    @endif
+                    
                     <td>{{ $item->publish_date }}</td>
                     <td>
                       <div class="text-center">
@@ -81,6 +95,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/2.3.3/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.3.3/js/dataTables.bootstrap5.js"></script>
+
+    <script>new DataTable('#dataTable');</script>
+    {{--  <script>
+      $(document).ready(function() {
+        $('#dataTable').DataTable();
+      })
+    </script>  --}}
 @endpush
 
     
